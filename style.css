@@ -1,0 +1,156 @@
+
+/* SAKURA THEME */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff0f5;
+    color: #713b50;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+/* SCREENS */
+
+.screen {
+    padding: 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* HEADINGS */
+
+h1, h2, h3 {
+    color: #d65b88;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+/* BUTTONS */
+
+button {
+    background-color: #f4a6c1;
+    color: #713b50;
+    border: 2px solid #d979a0;
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e98bad;
+    color: white;
+}
+
+/* INPUT */
+
+input {
+    background-color: white;
+    color: #713b50;
+    border: 2px solid #e8a0bb;
+    padding: 12px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: 2px solid #d979a0;
+}
+
+/* ITEM SELECTION */
+
+.items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px;
+}
+
+.items img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    cursor: pointer;
+
+    background-color: #ffe1ec;
+    border: 3px solid #e8a0bb;
+    padding: 10px;
+}
+
+.items img:hover {
+    border-color: #c94f80;
+    background-color: #ffcadd;
+}
+
+/* BATTLE */
+
+.battle {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.battle > div {
+    background-color: #ffe1ec;
+    border: 2px solid #e8a0bb;
+    padding: 20px;
+}
+
+/* RESULT */
+
+#result {
+    font-size: 75px;
+    color: #d65b88;
+}
+
+/* LEADERBOARD */
+
+#leaderboard {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #ffe1ec;
+    border: 2px solid #e8a0bb;
+}
+
+#leaderboard p {
+    padding: 12px;
+    margin: 0;
+    border-bottom: 1px solid #e8a0bb;
+}
+
+/* FINAL SCREEN */
+
+#winRate {
+    font-size: 60px;
+    color: #d65b88;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .items {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .battle {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .screen {
+        padding: 20px;
+    }
+}
+
