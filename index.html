@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Backpack Battles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENU -->
+    <section id="menu" class="screen">
+        <h1>Backpack Battles</h1>
+        <button onclick="showScreen('name')">Play</button>
+        <button onclick="openStats()">Stats</button>
+    </section>
+
+    <!-- HERO NAME -->
+    <section id="name" class="screen hidden">
+        <h2>Enter your hero name</h2>
+        <input id="heroName" placeholder="Hero name">
+        <button onclick="startGame()">Start</button>
+        <button onclick="showScreen('menu')">Back</button>
+    </section>
+
+    <!-- STATS -->
+    <section id="stats" class="screen hidden">
+        <h2>Leaderboard</h2>
+        <div id="leaderboard"></div>
+        <button onclick="showScreen('menu')">Back</button>
+    </section>
+
+    <!-- ITEM PICK -->
+    <section id="pick" class="screen hidden">
+        <h2 id="roundTitle">Round 1 / 10</h2>
+        <p>Choose one item:</p>
+
+      <div class="items" id="itemChoices">
+          <!-- Items will be loaded from the server -->
+      </div>
+        <p id="buildDisplay"></p>
+        <button onclick="showScreen('menu')">Menu</button>
+    </section>
+
+    <!-- BATTLE -->
+    <section id="battle" class="screen hidden">
+        <h2>Battle result</h2>
+
+        <div class="battle">
+            <div>
+                <h3 id="playerName"></h3>
+                <p>Your build</p>
+                <div id="playerBuild"></div>
+            </div>
+
+            <h2>VS</h2>
+
+            <div>
+                <h3 id="enemyName"></h3>
+                <p>Enemy build</p>
+                <div id="enemyBuild"></div>
+            </div>
+        </div>
+
+        <h1 id="result">WIN</h1>
+        <button onclick="nextRound()">Continue</button>
+    </section>
+
+    <!-- END -->
+    <section id="end" class="screen hidden">
+        <h1>Game finished!</h1>
+        <h2 id="winRate"></h2>
+        <p id="finalStats"></p>
+        <button onclick="showScreen('menu')">Back to menu</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
